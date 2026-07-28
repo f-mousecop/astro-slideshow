@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BackgroundSlideshowAstroComponent from '../components/BackgroundSlideshow.astro';
+---
+
+<Layout>
+    <div id="container">
+        <main>
+            <section id="hero">
+                <BackgroundSlideshowAstroComponent>
+                    <section id="hero-content">
+                        <h1>Welcome to the Slideshow Page</h1>
+                        <p>This is a simple slideshow page using Astro.</p>
+                        
+                        <section id="links">
+                            <a class="button" href="/">Back to Home</a>
+                        </section>
+                    </section>
+                </BackgroundSlideshowAstroComponent>
+            </section>
+
+            <section id="body">
+                <section id="info">
+                    <h2>How It Works</h2>
+                    <p>
+                        The background slideshow is implemented using a custom Astro component that cycles through a set of images. The component uses CSS transitions to create a smooth fade effect between slides.
+                    </p>
+                </section>
+            </section>
+        </main>
+    </div>
+</Layout>
+
+<style>
+    #container {
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+	}
+    
+    main {
+        width: 100%;
+	}
+
+    #links {
+		display: flex;
+        justify-content: center;
+		gap: 16px;
+	}
+
+	#links a {
+		display: flex;
+		align-items: center;
+		padding: 14px 16px;
+		color: #111827;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+
+    #links a:hover {
+		color: rgb(78, 80, 86);
+	}
+
+	#links a svg {
+		height: 1em;
+		margin-left: 8px;
+	}
+
+    #links a.button {
+		color: white;
+		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+		box-shadow:
+			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
+		border-radius: 10px;
+	}
+
+	#links a.button:hover {
+		color: rgb(230, 230, 230);
+		box-shadow: none;
+	}
+
+    #hero {
+        position: relative;
+        width: 100%;
+        min-height: 30rem;
+        overflow: hidden;
+        /* justify-content: center;
+        align-items: center;
+        display: flex; */
+    }
+
+    #hero-content {
+        max-width: 50rem;
+        color: white;
+        text-align: center;
+    }
+
+    #body {
+        height: 100%;
+		display: flex;
+		justify-content: center;
+        padding: 2rem;
+    }
+
+    #info {
+        padding: 1rem;
+        background-color: rgba(122, 122, 122, 0.8);
+        border-radius: 8px;
+    }
+</style>
