@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import BackgroundSlideshowAstroComponent from '../components/BackgroundSlideshow.astro';
+import CodeWindowWidget from '../components/CodeWindowWidget.astro';
 ---
 
 <Layout>
@@ -25,6 +26,10 @@ import BackgroundSlideshowAstroComponent from '../components/BackgroundSlideshow
                     <p>
                         The background slideshow is implemented using a custom Astro component that cycles through a set of images. The component uses CSS transitions to create a smooth fade effect between slides.
                     </p>
+                </section>
+
+                <section id="code-window">
+                    <CodeWindowWidget />
                 </section>
             </section>
         </main>
@@ -97,6 +102,7 @@ import BackgroundSlideshowAstroComponent from '../components/BackgroundSlideshow
     #body {
         height: 100%;
 		display: flex;
+        flex-direction: column;
 		justify-content: center;
         padding: 2rem;
     }
@@ -105,5 +111,12 @@ import BackgroundSlideshowAstroComponent from '../components/BackgroundSlideshow
         padding: 1rem;
         background-color: rgba(122, 122, 122, 0.8);
         border-radius: 8px;
+    }
+
+    #code-window {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
     }
 </style>
